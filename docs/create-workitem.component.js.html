@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: create-workitem.component.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: create-workitem.component.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
+//import data from "./db"; 
+//import Checkbox from './Checkbox';
+export default class CreateWorkItem extends Component {
+
+    constructor(props) {
+        super(props);
+    
+       this.onChangeService= this.onChangeService.bind(this);
+        // this.onChangeSauce = this.onChangeSauce.bind(this);
+        // this.onChangeCheese = this.onChangeCheese.bind(this); 
+        this.onSubmit = this.onSubmit.bind(this);
+    
+        this.state = {
+          crust: '',
+          sauce: '',
+          cheese: 0,
+          protein: [],
+          veggiesState : { checked: false },
+          selectedService: 'Delivery',
+          name: ''
+        }
+      }
+      componentDidMount() {
+        this.setState({ 
+            name:'Test User' 
+        });
+      } 
+      
+        /**
+   * Make an API call to fetch treemap data.
+   * @return {object} window.$.ajax
+   */
+
+
+      onSubmit(e) {
+        e.preventDefault();
+      
+        const workList = {
+          crust: this.state.username,
+          sauce: this.state.sauce,
+          cheese: this.state.cheese,
+          protein: this.state.protein,
+          veggies: this.state.veggies,
+          selectedService: this.state.selectedService,
+          name: this.state.name 
+        };
+        console.log('workLists: ', workList);
+        
+        window.location = '/';
+      }
+      
+      onChangeService(e) {
+        this.setState({
+          selectedService: e.target.checked
+        });
+      }
+    
+    //   onChangeVeggies(e) {
+    //     this.setState({
+    //       description: e.target.value
+    //     });
+    //   }
+    //write why are we binding here? Explain
+
+  render() {
+    const veggieItems = [
+        'One',
+        'Two',
+        'Three',
+      ];
+     // const Inventory = data.SocialMedias;
+      //console.log(Inventory)
+    return (
+    &lt;div> 
+        &lt;p>You are on the CreateWorkItem component!&lt;/p>
+
+        &lt;h3>Create New Pizza&lt;/h3>
+      &lt;form onSubmit={this.onSubmit}>
+        &lt;label>Pick the Curst: &lt;/label>
+        &lt;select 
+                required
+                className="form-control"
+                value={this.state.crust}>
+        &lt;/select>
+        &lt;label>Pick an amazing Sauce: &lt;/label>
+        &lt;select 
+                required
+                className="form-control"
+                value={this.state.sauce}>
+        &lt;/select>
+        &lt;label>Pick the type of Cheese: &lt;/label>
+        &lt;select 
+                required
+                className="form-control"
+                value={this.state.cheese}>
+        &lt;/select>
+        &lt;label>Pick a Protein: &lt;/label>
+        &lt;select 
+                required
+                className="form-control"
+                value={this.state.protein}>
+        &lt;/select>
+        &lt;label>Select your veggies: &lt;/label>
+        &lt;select 
+                required
+                className="form-control"
+                value={this.state.veggies}>
+        &lt;/select>
+        &lt;label>Select a service: &lt;/label>
+        &lt;div className="radio">
+      &lt;label>
+        &lt;input type="radio" value='Delivery' 
+                      checked={this.state.selectedService === 'Delivery'} 
+                      onChange={this.onChangeService} />
+        Delivery
+      &lt;/label>
+    &lt;/div>
+    &lt;div className="radio">
+      &lt;label>
+        &lt;input type="radio" value='Takeout'
+                      checked={this.state.selectedService === 'Takeout'} 
+                      onChange={this.handleOptionChange} />
+        Takeout
+      &lt;/label>
+      &lt;/div> 
+      &lt;div className="form-group"> 
+            &lt;label>Enter your Name: &lt;/label>
+            &lt;input  type="text"
+                required
+                className="form-control"
+                value={this.state.description} 
+                />
+          &lt;/div>
+
+          &lt;div className="form-group">
+          &lt;input type="submit" value="Create Pizza WorkList" className="btn btn-primary" />
+        &lt;/div>
+          &lt;/form>
+    &lt;/div>
+    )
+  }
+} 
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#onSubmit">onSubmit</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Fri Jul 10 2020 09:39:42 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

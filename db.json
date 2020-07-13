@@ -1,0 +1,59 @@
+{
+  "Inventory": {
+    "crusts": [
+      "Original",
+      "Gluten-free"
+    ],
+    "sauces": [
+      "Red sauce",
+      "Green pesto",
+      "White sauce"
+    ],
+    "cheeses": [
+      "Mozzarella",
+      "Dairy-free cheese",
+      "Gorgonzola",
+      "Parmesan"
+    ],
+    "proteins": [
+      "Anchovies",
+      "Bacon",
+      "Beef",
+      "Chicken",
+      "Pepperoni"
+    ],
+    "veggies": [
+      "Artichokes",
+      "Arugula",
+      "Basil",
+      "Black Olives",
+      "Jalapenos",
+      "Mushrooms",
+      "Onions",
+      "Pineapple",
+      "Spinach",
+      "Romaine"
+    ]
+  },
+  "worklist": {
+    "crust": "Original",
+    "sauce": "White sauce",
+    "cheese": "Gorgonzola",
+    "protein": "Chicken",
+    "dairy": "Dairy",
+    "selectedService": "Takeout",
+    "addedProducts": [
+      "Artichokes",
+      "Arugula",
+      "Basil",
+      "Black Olives",
+      "Jalapenos",
+      "Mushrooms",
+      "Onions",
+      "Pineapple",
+      "Spinach",
+      "Romaine"
+    ],
+    "name": "as"
+  }
+}
